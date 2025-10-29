@@ -62,3 +62,5 @@ This website serves as a central hub for professional projects, technical skills
 ---
 
 > 💬 *This portfolio was created to showcase professional growth and technical projects in AI-driven testing, analytics, and data platforms.*
+
+'''if any issues for accessing site. Click on WAKEUP SERVERS after landing on website'''
