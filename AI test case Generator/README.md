@@ -2,7 +2,7 @@
 
 Generate detailed Positive, Negative, and Edge test cases from user stories using AI.
 
-**Live Demo:** [Hugging Face Space](https://huggingface.co/spaces/<your-username>/ai-testcase-generator)
+**Live Demo:** [Hugging Face Space](https://huggingface.co/spaces/DivyeshMosaic/Testing-Bot)
 
 ## 🚀 How to Run Locally
 ```bash
