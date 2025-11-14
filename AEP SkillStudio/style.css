@@ -1,0 +1,76 @@
+:root{
+  --bg:#f4f6f8; --card:#fff; --muted:#6b7280; --text:#0f1724;
+  --accent:#00a99d; /* default teal */
+  --sidebar:#0f1724; --sidebarText:#fff;
+}
+
+/* AEP color variant overrides toggled by JS */
+.aep-theme { --accent:#ff0000; } /* simple strong red accent (you can change) */
+
+/* Dark mode override */
+.dark { --bg:#0b0f14; --card:#0b1116; --muted:#9aa4ad; --text:#e6eef6; --sidebar:#05070a; --sidebarText:#cfe7ff; }
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);}
+
+/* Layout */
+#app{display:flex;min-height:100vh}
+#sidebar{width:260px;background:var(--sidebar);color:var(--sidebarText);padding:28px 18px;display:flex;flex-direction:column;justify-content:space-between}
+.brand .logo{font-weight:700;font-size:20px;line-height:1.05;color:var(--sidebarText)}
+nav{margin-top:18px}
+nav .nav{display:block;width:100%;text-align:left;padding:12px 14px;border-radius:10px;border:none;background:transparent;color:var(--sidebarText);margin-bottom:10px;cursor:pointer}
+nav .nav.active{background:rgba(255,255,255,0.06)}
+.sidebar-bottom{margin-top:24px}
+.theme-controls button{margin-right:8px;padding:8px 10px;border-radius:8px;border:none;cursor:pointer}
+
+/* Main */
+#content{flex:1;padding:22px 34px;overflow:auto}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.topbar input{padding:8px 10px;border-radius:8px;border:1px solid #e5e7eb;min-width:220px}
+.topbar button{padding:8px 10px;border-radius:8px;border:none;background:var(--accent);color:#fff}
+
+/* pages */
+.page{display:none}
+.page.visible{display:block}
+
+/* grid and card */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 6px 20px rgba(15,23,42,0.06);}
+
+/* form */
+input, select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-top:12px}
+.row{display:flex;gap:12px;margin-top:12px;align-items:center}
+.row.compact label{margin-right:8px}
+.row.compact input{width:90px}
+.btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer;background:#eee}
+.btn.teal{background:var(--accent);color:#fff}
+.btn.green{background:#2fb17a;color:#fff}
+.btn.red{background:#ff6b6b;color:#fff}
+.btn.ghost{background:transparent;border:1px solid #e6e9ee}
+
+/* table */
+.listTable{width:100%;border-collapse:collapse;margin-top:12px}
+.listTable th{ text-align:left;padding:12px;border-bottom:1px solid #eef2f7;color:var(--muted)}
+.listTable td{padding:12px;border-bottom:1px solid #f3f6f8}
+
+/* field row inside schema editor */
+.field-row{display:flex;gap:8px;margin-top:10px;align-items:center}
+.field-row input{flex:1}
+.field-row select{width:150px}
+.field-row .identity{display:flex;align-items:center;gap:6px}
+
+/* modal JSON viewer */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:9999}
+.modal.hidden{display:none}
+.modal-content{width:80%;max-height:80%;background:#0b1220;color:#fff;border-radius:12px;padding:18px;overflow:auto}
+.modal-content pre{white-space:pre-wrap;word-break:break-word;font-size:13px}
+.modal .close{position:absolute;right:32px;top:28px;background:transparent;border:none;color:#fff;font-size:22px;cursor:pointer;padding:6px}
+
+/* log box */
+.log{height:220px;background:linear-gradient(180deg,#f7fbff,#ffffff);border-radius:8px;padding:8px;overflow:auto;border:1px solid #e6eef7}
+
+/* responsive */
+@media (max-width:900px){
+  #sidebar{display:none}
+  .grid{grid-template-columns:1fr}
+}
